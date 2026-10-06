@@ -1,2 +1,2 @@
-# fuelsmart
-My CAC program
+# Fuel Smart
+## The Athletes Tool
