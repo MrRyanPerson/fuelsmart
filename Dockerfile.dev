@@ -1,0 +1,8 @@
+# Sourced from: https://github.com/MrRyanPerson/boogle/Dockerfile.dev (me)
+FROM node:24-bookworm
+
+WORKDIR /usr/src/app
+
+EXPOSE 5173
+
+CMD ["npx", "vite", "dev", "--host"]

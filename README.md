@@ -1,2 +1,2 @@
 # Fuel Smart
-## The Athletes Tool
+## Feel Smart while Fueling Smart

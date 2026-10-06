@@ -1,0 +1,36 @@
+# Sourced from https://github.com/MrRyanPerson/boogle (me)
+name: fuelsmart
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    restart: always
+    volumes:
+      - .:/usr/src/app/
+    networks:
+      - app
+    ports:
+      - "5173:5173"
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    restart: always
+    volumes:
+      - ./backend/logs:/app/logs
+    networks:
+      - app
+    ports:
+      - "8000:8000"
+
+
+
+networks:
+  app:
+    # Specify driver options
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
