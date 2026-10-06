@@ -21,6 +21,7 @@ services:
     restart: always
     volumes:
       - ./backend/logs:/app/logs
+      - ./backend:/app
     networks:
       - app
     ports:
